@@ -65,7 +65,7 @@
 #define MENU_3_SPEED_MAX    		9ul
 #define MENU_3_SPIN_MAX    			1ul
 /********************** internal data declaration ****************************/
-task_menu_dta_t task_menu_dta = {DEL_MEN_XX_MIN, ST_MAIN_MENU, EV_MEN_MEN_IDLE, false};
+task_menu_dta_t task_menu_dta = {DEL_MEN_XX_MIN, ST_MAIN_MENU, EV_MEN_ENT_IDLE, false};
 
 task_menu_motor_dta_t task_menu_motor_dta_1= {0,0,0,0};
 
@@ -212,7 +212,7 @@ void task_menu_update(void *parameters)
             	  	              displayStringWrite(menu_str);
 
 
-	            	  	  	  	  if ((true == p_task_menu_dta->flag) && (EV_MEN_MEN_ACTIVE == p_task_menu_dta->event)){
+	            	  	  	  	  if ((true == p_task_menu_dta->flag) && (EV_MEN_ENT_ACTIVE == p_task_menu_dta->event)){
 	            	  	  	  		  p_task_menu_dta->flag = false;
 	            	  	  	  		  p_task_menu_dta->state = ST_01_MENU;}
 	            	  	  	  	  break;
